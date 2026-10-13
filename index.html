@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksForGeeksLogo</title>
+    <style>
+        .wrapper {
+            display: flex;
+        }
+
+        body {
+            padding: 50px;
+            box-sizing: border-box;
+
+        }
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            border: 20px solid rgb(27, 128, 27);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .circle::after {
+            content: "";
+            position: absolute;
+            border-top: 100px solid transparent;
+            top: -35px;
+        }
+
+        .circle1::after {
+            border-left: 140px solid rgb(254, 252, 252);
+            left: -50px;
+            top: -35px;
+        }
+
+        .circle2::after {
+            border-right: 140px solid rgb(255, 253, 253);
+            right: -50px;
+        }
+
+        .circle1::before {
+            content: "";
+            height: 20px;
+            width: 276px;
+            position: absolute;
+            background: green;
+            left: -18px;
+            top: 45px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+    </div>
+</body>
+
+</html>
